@@ -1,0 +1,297 @@
+
+ **********************************************
+ *** Specfem 2-D Mesher - MPI version       ***
+ **********************************************
+
+ Running Git version of the code corresponding to commit 485f3dff7f68497acb4bcc07e4a7018e235dd14a
+ dating From Date:   Mon Nov 7 12:19:35 2022 +0100
+
+ Reading the parameter file...
+
+ Title of the simulation: Tape-Liu-Tromp (GJI 2007)
+
+
+ Receiver lines:
+   Nb of line sets =            1
+
+ Materials:
+   Nb of solid, fluid or porous materials =            2
+
+ --------
+ Material #           1  isotropic
+ rho,cp,cs   =    2600.0000000000000        5800.0000000000000        3500.0000000000000     
+ Qkappa, Qmu =    10.000000000000000        10.000000000000000     
+ Material is solid
+ --------
+ Material #           2  isotropic
+ rho,cp,cs   =    2600.0000000000000        5800.0000000000000        3500.0000000000000     
+ Qkappa, Qmu =    10.000000000000000        10.000000000000000     
+ Material is solid
+ --------
+
+
+ Mesh from internal meshing:
+
+ Reading interface data from file: ./DATA/interfaces_Tape2007.dat
+ Reading            2  points for interface            1
+ Reading            2  points for interface            2
+
+ Total number of layers in z direction =            1
+ There are           40  spectral elements along Z in layer            1
+
+ Total number of spectral elements along X =           40
+ Total number of spectral elements along Z =           40
+
+ Regions:
+   Nb of regions in the mesh =            8
+
+ ------
+ Region            1
+ IX from            1  to           10
+ IZ from            1  to           20
+ Material #            1  isotropic
+ Material is solid
+ vp     =    5800.00000    
+ vs     =    3500.00000    
+ rho    =    2600.00000    
+ Poisson's ratio =   0.213651240    
+ QKappa =    10.0000000    
+ Qmu    =    10.0000000    
+ ------
+ Region            2
+ IX from           11  to           20
+ IZ from            1  to           20
+ Material #            2  isotropic
+ Material is solid
+ vp     =    5800.00000    
+ vs     =    3500.00000    
+ rho    =    2600.00000    
+ Poisson's ratio =   0.213651240    
+ QKappa =    10.0000000    
+ Qmu    =    10.0000000    
+ ------
+ Region            3
+ IX from           21  to           30
+ IZ from            1  to           20
+ Material #            1  isotropic
+ Material is solid
+ vp     =    5800.00000    
+ vs     =    3500.00000    
+ rho    =    2600.00000    
+ Poisson's ratio =   0.213651240    
+ QKappa =    10.0000000    
+ Qmu    =    10.0000000    
+ ------
+ Region            4
+ IX from           31  to           40
+ IZ from            1  to           20
+ Material #            2  isotropic
+ Material is solid
+ vp     =    5800.00000    
+ vs     =    3500.00000    
+ rho    =    2600.00000    
+ Poisson's ratio =   0.213651240    
+ QKappa =    10.0000000    
+ Qmu    =    10.0000000    
+ ------
+ Region            5
+ IX from            1  to           10
+ IZ from           21  to           40
+ Material #            2  isotropic
+ Material is solid
+ vp     =    5800.00000    
+ vs     =    3500.00000    
+ rho    =    2600.00000    
+ Poisson's ratio =   0.213651240    
+ QKappa =    10.0000000    
+ Qmu    =    10.0000000    
+ ------
+ Region            6
+ IX from           11  to           20
+ IZ from           21  to           40
+ Material #            1  isotropic
+ Material is solid
+ vp     =    5800.00000    
+ vs     =    3500.00000    
+ rho    =    2600.00000    
+ Poisson's ratio =   0.213651240    
+ QKappa =    10.0000000    
+ Qmu    =    10.0000000    
+ ------
+ Region            7
+ IX from           21  to           30
+ IZ from           21  to           40
+ Material #            2  isotropic
+ Material is solid
+ vp     =    5800.00000    
+ vs     =    3500.00000    
+ rho    =    2600.00000    
+ Poisson's ratio =   0.213651240    
+ QKappa =    10.0000000    
+ Qmu    =    10.0000000    
+ ------
+ Region            8
+ IX from           31  to           40
+ IZ from           21  to           40
+ Material #            1  isotropic
+ Material is solid
+ vp     =    5800.00000    
+ vs     =    3500.00000    
+ rho    =    2600.00000    
+ Poisson's ratio =   0.213651240    
+ QKappa =    10.0000000    
+ Qmu    =    10.0000000    
+ ------
+
+ Parameter file successfully read 
+
+
+ Mesh from internal meshing:
+   Total number of spectral elements         =         1600
+
+ PML mesh elements:
+   Total number of PML elements =            0
+
+ The mesh contains         1600  elements
+
+ Control elements have            4  nodes
+
+ Reading in SOURCE file...
+
+ Source           1
+   Position xs, zs =    96000.000000000000        180000.00000000000     
+
+   Source type (1=force, 2=moment tensor):            1
+   Force source:
+   Angle of the source (deg) =    0.0000000000000000     
+
+   Time function type (1=Ricker, 2=First derivative, 3=Gaussian, 4=Dirac, 5=Heaviside, 6,7=ocean type, 8=Read from file, 9=burst, 10=Sinusoidal, 11=Ormsby):           2
+   Ricker wavelet (first-derivative):
+   Frequency, delay =   0.14000000000000001        0.0000000000000000     
+   Multiplying factor  =    10000000000.000000     
+
+ all sources are okay
+
+ Normals to surface not needed
+
+ Node coordinates:
+
+ reading node coordinates from interfaces...
+
+ Mesh surfaces:
+   determining acoustic free surface...
+   number of acoustic elements with free surface =            0
+
+   determining absorbing boundary surfaces...
+   number of elements with absorbing boundaries =          120
+
+
+ Mesh dimensions: 
+   Min and max value of X in the grid =    0.0000000000000000        480000.00000000000     
+   Min and max value of Z in the grid =    0.0000000000000000        180000.00000000000     
+
+ Mesh partitioning:
+   decomposing mesh using NPROC =            4
+
+ Graph construction:
+   graph adjacency done
+
+ ************ Computing elements load ************
+ Number of elastic elements :        1600
+ Number of acoustic elements :           0
+ Number of viscoelastic elements :           0
+ Number of viscoacoustic elements :           0
+ Number of elastic PML elements :           0
+ Number of acoustic PML elements :           0
+ Number of viscoelastic PML elements :           0
+ Number of viscoacoustic PML elements :           0
+ *************************************************
+
+
+ Partitioning type: SCOTCH
+
+ Coupled interfaces:
+ nedges_coupled (acoustic/elastic)     =            0
+ nedges_coupled (acoustic/poroelastic) =            0
+ nedges_coupled (poroelastic/elastic)  =            0
+
+ Local numbering:
+   NPROC:            4
+   number of elements:         1600
+
+ decompose mesh all done
+
+ Absorbing boundaries:
+   nedge_bound   :          120
+   nelemabs_merge:          120
+
+ Saving databases:
+   database file: ./OUTPUT_FILES/Database00000.bin
+   slice            0  has number of spectral elements =         400
+
+   database file: ./OUTPUT_FILES/Database00001.bin
+   slice            1  has number of spectral elements =         400
+
+   database file: ./OUTPUT_FILES/Database00002.bin
+   slice            2  has number of spectral elements =         400
+
+   database file: ./OUTPUT_FILES/Database00003.bin
+   slice            3  has number of spectral elements =         400
+
+   VTK mesh files:
+   written file: ./OUTPUT_FILES//mesh_materials.vtk
+   written file: ./OUTPUT_FILES//mesh_partition_number.vtk
+   done
+
+ creating STATIONS file...
+
+ writing the ./DATA/STATIONS file
+
+
+ There are           40  receivers
+
+ Target positions (x,z) of the           40  receivers
+
+ Receiver            1  =    10000.000000000000        180000.00000000000     
+ Receiver            2  =    21794.871794871797        180000.00000000000     
+ Receiver            3  =    33589.743589743593        179999.99999999997     
+ Receiver            4  =    45384.615384615383        180000.00000000000     
+ Receiver            5  =    57179.487179487180        180000.00000000000     
+ Receiver            6  =    68974.358974358969        180000.00000000000     
+ Receiver            7  =    80769.230769230766        180000.00000000000     
+ Receiver            8  =    92564.102564102563        180000.00000000000     
+ Receiver            9  =    104358.97435897436        180000.00000000000     
+ Receiver           10  =    116153.84615384616        180000.00000000003     
+ Receiver           11  =    127948.71794871795        180000.00000000000     
+ Receiver           12  =    139743.58974358975        180000.00000000000     
+ Receiver           13  =    151538.46153846153        180000.00000000003     
+ Receiver           14  =    163333.33333333334        179999.99999999997     
+ Receiver           15  =    175128.20512820513        180000.00000000000     
+ Receiver           16  =    186923.07692307694        180000.00000000000     
+ Receiver           17  =    198717.94871794872        180000.00000000000     
+ Receiver           18  =    210512.82051282050        180000.00000000000     
+ Receiver           19  =    222307.69230769231        180000.00000000000     
+ Receiver           20  =    234102.56410256409        180000.00000000000     
+ Receiver           21  =    245897.43589743591        180000.00000000000     
+ Receiver           22  =    257692.30769230769        180000.00000000000     
+ Receiver           23  =    269487.17948717950        180000.00000000000     
+ Receiver           24  =    281282.05128205131        180000.00000000000     
+ Receiver           25  =    293076.92307692306        180000.00000000000     
+ Receiver           26  =    304871.79487179487        180000.00000000000     
+ Receiver           27  =    316666.66666666669        180000.00000000000     
+ Receiver           28  =    328461.53846153844        180000.00000000000     
+ Receiver           29  =    340256.41025641025        180000.00000000000     
+ Receiver           30  =    352051.28205128206        180000.00000000000     
+ Receiver           31  =    363846.15384615387        180000.00000000000     
+ Receiver           32  =    375641.02564102563        180000.00000000000     
+ Receiver           33  =    387435.89743589744        180000.00000000000     
+ Receiver           34  =    399230.76923076925        180000.00000000000     
+ Receiver           35  =    411025.64102564100        180000.00000000000     
+ Receiver           36  =    422820.51282051281        180000.00000000000     
+ Receiver           37  =    434615.38461538462        180000.00000000000     
+ Receiver           38  =    446410.25641025644        180000.00000000000     
+ Receiver           39  =    458205.12820512819        180000.00000000000     
+ Receiver           40  =    470000.00000000000        180000.00000000000     
+
+ This will be a parallel simulation on            4  processor cores
+

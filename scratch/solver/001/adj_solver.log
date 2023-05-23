@@ -1,0 +1,2837 @@
+
+ **********************************************
+ **** Specfem 2-D Solver - MPI version     ****
+ **********************************************
+
+ Running Git version of the code corresponding to commit 485f3dff7f68497acb4bcc07e4a7018e235dd14a
+ dating From Date:   Mon Nov 7 12:19:35 2022 +0100
+
+ There are            4  MPI processes
+ Processes are numbered from 0 to            3
+
+ There is a total of            4  slices
+
+
+ NDIM =            2
+
+ NGLLX =            5
+ NGLLZ =            5
+
+ using single precision for the calculations
+
+ smallest and largest possible floating-point numbers are:    1.17549435E-38   3.40282347E+38
+
+ Reading the parameter file...
+
+ Title of the simulation: Tape-Liu-Tromp (GJI 2007)
+
+
+ Parameter file successfully read 
+
+ Reading in SOURCE file...
+
+ Source           1
+   Position xs, zs =    96000.000000000000        180000.00000000000     
+
+   Source type (1=force, 2=moment tensor):            1
+   Force source:
+   Angle of the source (deg) =    0.0000000000000000     
+
+   Time function type (1=Ricker, 2=First derivative, 3=Gaussian, 4=Dirac, 5=Heaviside, 6,7=ocean type, 8=Read from file, 9=burst, 10=Sinusoidal, 11=Ormsby):           2
+   Ricker wavelet (first-derivative):
+   Frequency, delay =   0.14000000000000001        0.0000000000000000     
+   Multiplying factor  =    10000000000.000000     
+
+ all sources are okay
+
+
+
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+ Program SPECFEM2D: 
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+ Tape-Liu-Tromp (GJI 2007)
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+ D a t e : 23 - 05 - 2023                                 T i m e  : 11:59:57
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+
+
+ C o n t r o l
+ =============
+
+     Number of spectral element control nodes. . .(npgeo) =    1764
+     Number of space dimensions. . . . . . . . . . (NDIM) =       2
+
+
+ C o n t r o l
+ =============
+
+     Display frequency . . . (NTSTEP_BETWEEN_OUTPUT_INFO) =    400
+     Color display . . . . . . . . . . . . . . . (colors) =      1
+      == 0     black and white display              
+      == 1     color display                        
+     Numbered mesh . . . . . . . . . . . . . . .(numbers) =      0
+      == 0     do not number the mesh               
+      == 1     number the mesh                      
+
+
+ C o n t r o l
+ =============
+
+     Seismograms recording type . . . . . . .(seismotype) = 1
+     Angle for first line of receivers. . . . .(anglerec) =   0.00
+
+
+ C o n t r o l
+ =============
+
+     Read external initial field. . . . . .(initialfield) =      F
+     Add Bielak conditions (add_Bielak_conditions_bottom) =      F
+     Add Bielak conditions .(add_Bielak_conditions_right) =      F
+     Add Bielak conditions . .(add_Bielak_conditions_top) =      F
+     Add Bielak conditions. .(add_Bielak_conditions_left) =      F
+     Attenuation in solid . . .(ATTENUATION_VISCOELASTIC) =      F
+     Attenuation in fluid . . (ATTENUATION_VISCOACOUSTIC) =      F
+     Save grid in ASCII file or not . (output_grid_ASCII) =      F
+     Save a file with total energy or not.(OUTPUT_ENERGY) =      F
+
+
+ C o n t r o l
+ =============
+
+     Vector display type . . . . . . . . .(imagetype_postscript) =      1
+     Percentage of cut for vector plots. . . . . . . .(cutsnaps) =   1.00
+     Subsampling of velocity model display. (subsamp_postscript) =      1
+
+
+ I t e r a t i o n s 
+ ===================
+
+     Number of time iterations . . . . .(NSTEP) =   14000
+     Time step increment. . . . . . . . . .(DT) =   2.500000E-02
+     Total simulation duration . . . . . (ttot) =   3.500000E+02
+
+
+ reading mesh databases:
+ reading nodal coordinates...
+
+ -- Spectral Elements --
+
+
+     Number of spectral elements . . . . . . . . .  (nspec) =   1600
+     Number of control nodes per element . . . . . (NGNOD) =      4
+     Number of points in X-direction . . . . . . . (NGLLX) =      5
+     Number of points in Y-direction . . . . . . . (NGLLZ) =      5
+     Number of points per element. . . . . . (NGLLX*NGLLZ) =     25
+     Number of points for display . . . . . . (pointsdisp) =      6
+     Number of element material sets . . . . . . . (numat) =      2
+     Number of acoustic forcing elements (nelem_acforcing) =      0
+     Number of acoustic free surf (nelem_acoustic_surface) =      0
+
+ reading attenuation setup...
+ reading material properties..
+
+
+ M a t e r i a l   s e t s :   2 D  (p o r o) e l a s t i c i t y
+ ======================================================
+
+     Number of material sets . . . . . . (numat) =     2
+
+
+     ----------------------------------------
+     -- Elastic (solid) isotropic material --
+     ----------------------------------------
+     Material set number. . . . . . . . (jmat) =     1
+     P-wave velocity. . . . . . . . . . . (cp) = 5.80000000E+03
+     S-wave velocity. . . . . . . . . . . (cs) = 3.50000000E+03
+     Mass density. . . . . . . . . . (density) = 2.60000000E+03
+     Poisson's ratio. . . . . . . . .(poisson) = 2.13651239E-01
+     First Lame parameter Lambda. . . (lambda) = 2.37640000E+10
+     Second Lame parameter Mu. . . . . . .(mu) = 3.18500000E+10
+     Bulk modulus Kappa . . . . . . . .(kappa) = 5.56140000E+10
+     Young's modulus E. . . . . . . . .(young) = 8.02334925E+10
+     QKappa_attenuation .  . . . . . .(QKappa) = 1.00000000E+01
+     Qmu_attenuation . . . . . . . . . . (Qmu) = 1.00000000E+01
+
+
+
+     ----------------------------------------
+     -- Elastic (solid) isotropic material --
+     ----------------------------------------
+     Material set number. . . . . . . . (jmat) =     2
+     P-wave velocity. . . . . . . . . . . (cp) = 5.80000000E+03
+     S-wave velocity. . . . . . . . . . . (cs) = 3.50000000E+03
+     Mass density. . . . . . . . . . (density) = 2.60000000E+03
+     Poisson's ratio. . . . . . . . .(poisson) = 2.13651239E-01
+     First Lame parameter Lambda. . . (lambda) = 2.37640000E+10
+     Second Lame parameter Mu. . . . . . .(mu) = 3.18500000E+10
+     Bulk modulus Kappa . . . . . . . .(kappa) = 5.56140000E+10
+     Young's modulus E. . . . . . . . .(young) = 8.02334925E+10
+     QKappa_attenuation .  . . . . . .(QKappa) = 1.00000000E+01
+     Qmu_attenuation . . . . . . . . . . (Qmu) = 1.00000000E+01
+
+ reading interfaces informations...
+   number of interfaces         =            3
+
+ reading absorbing boundary...
+   Total number of absorbing elements =          120
+
+   any absorbing boundary flag        =  T
+   PML boundary flag                  =  F
+   Stacey boundary flag               =  T
+
+
+ Absorbing boundaries:
+   using Stacey absorbing boundary conditions
+
+   Total number of absorbing elements:          120
+     nspec_left   =           40
+     nspec_right  =           40
+     nspec_bottom =            0
+     nspec_top    =           40
+
+
+ reading acoustic forcing...
+   acoustic forcing                             =  F
+   number of acoustic forcing boundary elements =            0
+
+ reading free surface information...
+   number of acoustic free surface boundary elements =            0
+ reading coupling surfaces...
+   number of fluid-solid edges  =            0
+   number of fluid-poro  edges  =            0
+   number of solid-poro  edges  =            0
+
+ reading tangential curves...
+   number of tangential curve nodes =            0
+
+ reading axial elements...
+   number of axial elements     =            0
+
+ done reading mesh databases
+
+
+ Setting up mesh
+
+ Generating global mesh numbering (fast version)...
+
+ Mesh numbering:
+   Total number of elements:         1600
+
+   Total number of acoustic elements           =            0
+   Total number of elastic/visco/poro elements =         1600
+
+ Approximate total number of grid points in the mesh
+ (with a few duplicates coming from MPI buffers):        26244
+
+ Approximate number of acoustic degrees of freedom in the mesh:            0
+ Approximate number of elastic degrees of freedom in the mesh:        52488
+   (there are 2 degrees of freedom per point for elastic elements)
+
+ Approximate total number of degrees of freedom in the mesh
+ (sum of the two values above):        52488
+
+  (for simplicity viscoelastic or poroelastic elements, if any,
+   are counted as elastic in the above three estimates;
+   in reality they have more degrees of freedom)
+
+   saving ibool array to: ./DATA/proc000000_NSPEC_ibool.bin
+
+ Mesh dimensions:
+   Xmin,Xmax of the whole mesh =    0.0000000000000000        480000.00000000000     
+   Zmin,Zmax of the whole mesh =    0.0000000000000000        180000.00000000000     
+
+ Material properties:
+   MODEL                 : gll
+   nspec                 :         1600
+   assign external model :  T
+
+   assigning an external velocity and density model
+   model selected             : gll
+   setup with binary database :            1
+
+   reading external files: DATA/proc*****_rho.bin, .._vp.bin, .._vs.bin
+   rho min/max =    2600.00000       2600.00000    
+   vp  min/max =    5417.32324       6388.08789    
+   vs  min/max =    3016.45996       3935.23950    
+
+   done reading external model
+
+   setting up material arrays
+   setting up anisotropic arrays
+   all material arrays done
+
+ Domains:
+   total number of acoustic elements        =            0
+   total number of elastic elements         =         1600
+   total number of poroelastic elements     =            0
+
+ Setting up MPI communication arrays
+
+   maximum number of MPI interfaces (for a single slice) =            3
+
+   total MPI interface points:          652
+
+   main process:
+   number of MPI interfaces in acoustic domain    =            0
+   number of MPI interfaces in elastic domain     =            3
+   number of MPI interfaces in poroelastic domain =            0
+
+   number of outer elements  =           39
+   number of inner elements  =          361
+
+   percentage of outer elements    9.75000000     %
+   percentage of inner elements    90.2500000     %
+
+   number of global nodes in outer elements  =          785
+   number of global nodes in inner elements  =         5929
+
+   determining communication phases:
+   elastic domains:
+   total number of outer/inner elements =          156        1444
+   total percentage of outer elements    9.75000000     %
+   total percentage of inner elements    90.2500000     %
+
+ All mesh setup done successfully
+
+ sources:
+   Total number of sources:            1
+
+
+   Setting parameters for source           1
+
+     Source Type. . . . . . . . . . . . . . = Collocated Force
+     X-position (meters). . . . . . . . . . =    9.6000000000E+04
+     Y-position (meters). . . . . . . . . . =    1.8000000000E+05
+     Fundamental frequency (Hz) . . . . . . =    1.4000000000E-01
+     Time delay (s) . . . . . . . . . . . . =    0.0000000000E+00
+     Multiplying factor . . . . . . . . . . =    1.0000000000E+10
+     Angle from vertical direction (deg). . =    0.0000000000E+00
+
+
+
+     using USER_T0 . . . . . . . . . =    90.000000000000000     
+       original t0 . . . . . . . . . =    8.5714285714285712     
+       min_tshift_src_original . . . =    0.0000000000000000     
+
+     fix new simulation start time . =   -90.000000000000000     
+     source            1 uses tshift =    0.0000000000000000     
+
+   Source:            1
+     Onset time. . . . . . =   -90.000000000000000     
+     Fundamental period. . =    7.1428571428571423     
+     Fundamental frequency =   0.14000000000000001     
+     The onset time is ok
+
+ Source:            1
+ *******************************
+  locating force source
+ *******************************
+
+ Force source:
+             original x:    96000.0000    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          388
+  in elastic domain
+  at xi,gamma coordinates =    1.0000000000000000        1.0000000000000000     
+
+
+ end of force source detection
+
+
+ receivers:
+
+ Total number of receivers =           40
+
+
+ ********************
+  locating receivers
+ ********************
+
+ reading receiver information from the ./DATA/STATIONS file
+
+
+ Station #            1     AA      S0001                           
+             original x:    10000.0000    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          381
+  in elastic domain
+  at xi,gamma coordinates =   0.66666666666666674        1.0000000000000000     
+ Distance from source:    86000.0000      m
+
+
+ Station #            2     AA      S0002                           
+             original x:    21794.8711    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          382
+  in elastic domain
+  at xi,gamma coordinates =   0.63247863248333314        1.0000000000000000     
+ Distance from source:    74205.1250      m
+
+
+ Station #            3     AA      S0003                           
+             original x:    33589.7422    
+             original z:    180000.000    
+ Closest estimate found:    7.27595761E-12  m away
+  in rank            1
+  in element          383
+  in elastic domain
+  at xi,gamma coordinates =   0.59829059828333386        1.0000000000000000     
+ Distance from source:    62410.2578      m
+
+
+ Station #            4     AA      S0004                           
+             original x:    45384.6172    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          384
+  in elastic domain
+  at xi,gamma coordinates =   0.56410256410000026        1.0000000000000000     
+ Distance from source:    50615.3828      m
+
+
+ Station #            5     AA      S0005                           
+             original x:    57179.4883    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          385
+  in elastic domain
+  at xi,gamma coordinates =   0.52991452991666665        1.0000000000000000     
+ Distance from source:    38820.5117      m
+
+
+ Station #            6     AA      S0006                           
+             original x:    68974.3594    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          386
+  in elastic domain
+  at xi,gamma coordinates =   0.49572649573333427        1.0000000000000000     
+ Distance from source:    27025.6406      m
+
+
+ Station #            7     AA      S0007                           
+             original x:    80769.2344    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          387
+  in elastic domain
+  at xi,gamma coordinates =   0.46153846153333389        1.0000000000000000     
+ Distance from source:    15230.7695      m
+
+
+ Station #            8     AA      S0008                           
+             original x:    92564.1016    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          388
+  in elastic domain
+  at xi,gamma coordinates =   0.42735042735000028        1.0000000000000000     
+ Distance from source:    3435.89746      m
+
+
+ Station #            9     AA      S0009                           
+             original x:    104358.977    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          389
+  in elastic domain
+  at xi,gamma coordinates =   0.39316239316666668        1.0000000000000000     
+ Distance from source:    8358.97461      m
+
+
+ Station #           10     AA      S0010                           
+             original x:    116153.844    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          390
+  in elastic domain
+  at xi,gamma coordinates =   0.35897435896666630        1.0000000000000000     
+ Distance from source:    20153.8457      m
+
+
+ Station #           11     AA      S0011                           
+             original x:    127948.719    
+             original z:    180000.000    
+ Closest estimate found:    1.45519152E-11  m away
+  in rank            1
+  in element          391
+  in elastic domain
+  at xi,gamma coordinates =   0.32478632478333264        1.0000000000000000     
+ Distance from source:    31948.7188      m
+
+
+ Station #           12     AA      S0012                           
+             original x:    139743.594    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          392
+  in elastic domain
+  at xi,gamma coordinates =   0.29059829059999903        1.0000000000000000     
+ Distance from source:    43743.5898      m
+
+
+ Station #           13     AA      S0013                           
+             original x:    151538.469    
+             original z:    180000.000    
+ Closest estimate found:    2.91038305E-11  m away
+  in rank            1
+  in element          393
+  in elastic domain
+  at xi,gamma coordinates =   0.25641025641666781        1.0000000000000000     
+ Distance from source:    55538.4609      m
+
+
+ Station #           14     AA      S0014                           
+             original x:    163333.328    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          394
+  in elastic domain
+  at xi,gamma coordinates =   0.22222222221666499        1.0000000000000000     
+ Distance from source:    67333.3359      m
+
+
+ Station #           15     AA      S0015                           
+             original x:    175128.203    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          395
+  in elastic domain
+  at xi,gamma coordinates =   0.18803418803333383        1.0000000000000000     
+ Distance from source:    79128.2031      m
+
+
+ Station #           16     AA      S0016                           
+             original x:    186923.078    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          396
+  in elastic domain
+  at xi,gamma coordinates =   0.15384615384999778        1.0000000000000000     
+ Distance from source:    90923.0781      m
+
+
+ Station #           17     AA      S0017                           
+             original x:    198717.953    
+             original z:    180000.000    
+ Closest estimate found:    2.91038305E-11  m away
+  in rank            1
+  in element          397
+  in elastic domain
+  at xi,gamma coordinates =   0.11965811964999981        1.0000000000000000     
+ Distance from source:    102717.945      m
+
+
+ Station #           18     AA      S0018                           
+             original x:    210512.828    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          398
+  in elastic domain
+  at xi,gamma coordinates =    8.5470085466668622E-002   1.0000000000000000     
+ Distance from source:    114512.820      m
+
+
+ Station #           19     AA      S0019                           
+             original x:    222307.688    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          399
+  in elastic domain
+  at xi,gamma coordinates =    5.1282051283332596E-002   1.0000000000000000     
+ Distance from source:    126307.695      m
+
+
+ Station #           20     AA      S0020                           
+             original x:    234102.562    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            1
+  in element          400
+  in elastic domain
+  at xi,gamma coordinates =    1.7094017100001413E-002   1.0000000000000000     
+ Distance from source:    138102.562      m
+
+
+ Station #           21     AA      S0021                           
+             original x:    245897.438    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          381
+  in elastic domain
+  at xi,gamma coordinates =   -1.7094017100001413E-002   1.0000000000000000     
+ Distance from source:    149897.438      m
+
+
+ Station #           22     AA      S0022                           
+             original x:    257692.312    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          382
+  in elastic domain
+  at xi,gamma coordinates =   -5.1282051283332596E-002   1.0000000000000000     
+ Distance from source:    161692.312      m
+
+
+ Station #           23     AA      S0023                           
+             original x:    269487.188    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          383
+  in elastic domain
+  at xi,gamma coordinates =   -8.5470085466668622E-002   1.0000000000000000     
+ Distance from source:    173487.172      m
+
+
+ Station #           24     AA      S0024                           
+             original x:    281282.062    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          384
+  in elastic domain
+  at xi,gamma coordinates =  -0.11965811965000465        1.0000000000000000     
+ Distance from source:    185282.047      m
+
+
+ Station #           25     AA      S0025                           
+             original x:    293076.938    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          385
+  in elastic domain
+  at xi,gamma coordinates =  -0.15384615384999778        1.0000000000000000     
+ Distance from source:    197076.922      m
+
+
+ Station #           26     AA      S0026                           
+             original x:    304871.781    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          386
+  in elastic domain
+  at xi,gamma coordinates =  -0.18803418803333383        1.0000000000000000     
+ Distance from source:    208871.797      m
+
+
+ Station #           27     AA      S0027                           
+             original x:    316666.656    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          387
+  in elastic domain
+  at xi,gamma coordinates =  -0.22222222221666985        1.0000000000000000     
+ Distance from source:    220666.672      m
+
+
+ Station #           28     AA      S0028                           
+             original x:    328461.531    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          388
+  in elastic domain
+  at xi,gamma coordinates =  -0.25641025641666298        1.0000000000000000     
+ Distance from source:    232461.531      m
+
+
+ Station #           29     AA      S0029                           
+             original x:    340256.406    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          389
+  in elastic domain
+  at xi,gamma coordinates =  -0.29059829059999903        1.0000000000000000     
+ Distance from source:    244256.406      m
+
+
+ Station #           30     AA      S0030                           
+             original x:    352051.281    
+             original z:    180000.000    
+ Closest estimate found:    5.82076609E-11  m away
+  in rank            0
+  in element          390
+  in elastic domain
+  at xi,gamma coordinates =  -0.32478632478333502        1.0000000000000000     
+ Distance from source:    256051.281      m
+
+
+ Station #           31     AA      S0031                           
+             original x:    363846.156    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          391
+  in elastic domain
+  at xi,gamma coordinates =  -0.35897435896666879        1.0000000000000000     
+ Distance from source:    267846.156      m
+
+
+ Station #           32     AA      S0032                           
+             original x:    375641.031    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          392
+  in elastic domain
+  at xi,gamma coordinates =  -0.39316239316667162        1.0000000000000000     
+ Distance from source:    279641.031      m
+
+
+ Station #           33     AA      S0033                           
+             original x:    387435.906    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          393
+  in elastic domain
+  at xi,gamma coordinates =  -0.42735042734999795        1.0000000000000000     
+ Distance from source:    291435.906      m
+
+
+ Station #           34     AA      S0034                           
+             original x:    399230.781    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          394
+  in elastic domain
+  at xi,gamma coordinates =  -0.46153846153333400        1.0000000000000000     
+ Distance from source:    303230.781      m
+
+
+ Station #           35     AA      S0035                           
+             original x:    411025.656    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          395
+  in elastic domain
+  at xi,gamma coordinates =  -0.49572649573332717        1.0000000000000000     
+ Distance from source:    315025.656      m
+
+
+ Station #           36     AA      S0036                           
+             original x:    422820.500    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          396
+  in elastic domain
+  at xi,gamma coordinates =  -0.52991452991666321        1.0000000000000000     
+ Distance from source:    326820.500      m
+
+
+ Station #           37     AA      S0037                           
+             original x:    434615.375    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          397
+  in elastic domain
+  at xi,gamma coordinates =  -0.56410256410000892        1.0000000000000000     
+ Distance from source:    338615.375      m
+
+
+ Station #           38     AA      S0038                           
+             original x:    446410.250    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          398
+  in elastic domain
+  at xi,gamma coordinates =  -0.59829059828334497        1.0000000000000000     
+ Distance from source:    350410.250      m
+
+
+ Station #           39     AA      S0039                           
+             original x:    458205.125    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          399
+  in elastic domain
+  at xi,gamma coordinates =  -0.63247863248332836        1.0000000000000000     
+ Distance from source:    362205.125      m
+
+
+ Station #           40     AA      S0040                           
+             original x:    470000.000    
+             original z:    180000.000    
+ Closest estimate found:    0.00000000      m away
+  in rank            0
+  in element          400
+  in elastic domain
+  at xi,gamma coordinates =  -0.66666666666667407        1.0000000000000000     
+ Distance from source:    374000.000      m
+
+ maximum error in location of all the receivers:    5.82076609E-11  m
+
+ end of receiver detection
+
+ found a total of           40  receivers, this is okay
+
+
+ adjoint sources:
+   adjoint source type:           1
+   reading ASCII adjoint source files
+   number of adjoint sources =           40
+   adjoint sources min/max   =   -3.79484991E-04   3.54543794E-04
+
+ Preparing timerun:
+
+ Movie simulation:
+   color images         - JPEG image type:            3
+   number of steps between outputs       :          200
+
+ Preparing image coloring: jpeg
+   allocating color image arrays
+   locating all the pixels of color images
+   total number of image pixels =       243200
+   done locating all the pixels of color images
+   coloring image background based on vp
+
+ Checking mesh and stability
+
+ ********
+ Model: P (or PI) velocity min,max =    5398.4619230769231        6650.7600000000002     
+ Model: S velocity min,max         =    2979.1986780134225        4187.9853941410138     
+ Model: density min,max            =    2600.0000000000000        2600.0000000000000     
+ ********
+
+
+ *********************************************
+ *** Verification of simulation parameters ***
+ *********************************************
+
+ *** Max grid size =    12000.000000000000     
+ *** Min grid size =    4499.9999999999709     
+ *** Max/min ratio =    2.6666666666666838     
+
+ *** Minimum GLL point distance  =    777.02924090704630     
+ *** Average GLL point distance  =    1124.9999999999927     
+
+ *** Minimum period resolved     =    5.0349109345074758     
+ *** Maximum frequency resolved  =   0.19861324520089485      Hz
+
+ *** Maximum suggested time step                 =    5.8416575016017061E-002
+ *** Maximum suggested (Ricker) source frequency =    7.9445298080357940E-002
+
+ *** for DT :    2.50000004E-02
+ *** Max CFL stability condition of the time scheme based on P wave velocity (must be below about 0.50 or so) =   0.21398036424717923     
+
+ ----
+ Number of points per wavelength:
+ ----
+   Source            1
+   maximum dominant source frequency =   0.35000000000000003      Hz
+
+   Nb pts / lambdaP_fmax min =    5.14139223    
+   Nb pts / lambdaP_fmax max =    6.20477486    
+
+   Nb pts / lambdaS_fmax min =    2.83733201    
+   Nb pts / lambdaS_fmax max =    3.88230109    
+
+ -----------------------------------------
+
+ histogram of min number of points per S wavelength in solid regions:
+
+ there are         1600  elements out of         1600  in solid regions
+   (i.e.,    100.000000     % of the total)
+
+ (too small = poor resolution of calculations -
+  too big = wasting memory and CPU time)
+ (threshold value is around 4.5 points per S wavelength
+  in elastic regions and 5.5 per P wavelength in fluid regions):
+
+   2.83733201      -    2.88958049              50     3.12500000      %
+   2.88958049      -    2.94182897              54     3.37500000      %
+   2.94182897      -    2.99407744             100     6.25000000      %
+   2.99407744      -    3.04632592             142     8.87500000      %
+   3.04632592      -    3.09857440             135     8.43750000      %
+   3.09857440      -    3.15082288              92     5.75000000      %
+   3.15082288      -    3.20307136              97     6.06250000      %
+   3.20307136      -    3.25531983              89     5.56250000      %
+   3.25531983      -    3.30756807              84     5.25000000      %
+   3.30756807      -    3.35981655             105     6.56250000      %
+   3.35981655      -    3.41206503              94     5.87500000      %
+   3.41206503      -    3.46431351              87     5.43750000      %
+   3.46431351      -    3.51656199             115     7.18750000      %
+   3.51656199      -    3.56881046             115     7.18750000      %
+   3.56881046      -    3.62105894              90     5.62500000      %
+   3.62105894      -    3.67330742              66     4.12500000      %
+   3.67330742      -    3.72555590              39     2.43750000      %
+   3.72555590      -    3.77780437              32     2.00000000      %
+   3.77780437      -    3.83005285              13    0.812500000      %
+   3.83005285      -    3.88230109               1     6.25000000E-02  %
+
+ total percentage =    100.00000000000000       %
+
+
+ total number of elements in fluid and solid regions =         1600
+
+ Preparing timerun constants
+
+ Preparing array allocations
+   arrays for elastic domains
+   done initialization
+
+
+ Preparing Stacey boundaries
+   total number of absorbing boundary faces/edges:          120
+
+ Attenuation:
+   viscoelastic  attenuation: F (shear & bulk attenuation in elastic domains)
+   viscoacoustic attenuation: F (bulk attenuation in acoustic domains)
+
+ Preparing mass matrices
+   initializing mass matrices
+   adding Stacey contributions to mass matrix
+   inverting mass matrices
+
+
+ Preparing kernel simulation:
+   estimated minimum period resolved by mesh        :    5.03491116    
+   estimated number of time steps for minimum period:          201
+   estimated steps between compute kernels (for a fair reconstruction):           50
+
+   number of steps between compute kernels:            1
+
+ Preparing adjoint simulation
+   initializing adjoint sensitivity kernels
+   reading Stacey boundary arrays
+
+ Preparing source time function
+   time stepping scheme:   Newmark
+   time stepping stages:            1
+   time step size      :    2.50000004E-02
+
+   number of time steps:        14000
+   number of sources   :            1
+
+   saving the source time function in a text file...
+
+ saving binary database       : ./OUTPUT_FILES/proc000000_data.bin
+ saving binary sources info   : ./OUTPUT_FILES/proc000000_sources_info.bin
+ saving binary receivers info : ./OUTPUT_FILES/proc000000_receivers_info.bin
+
+ Elapsed time for preparing timerun in seconds =    6.5962919999999994E-002
+
+ ************
+  time loop
+ ************
+               scheme:         Newmark
+
+            time step:    2.50000004E-02  s
+ number of time steps:        14000
+ total simulated time:    350.000000      seconds
+ start time:  -90.0000000      seconds
+
+
+ =========================================
+ =  T i m e  e v o l u t i o n  l o o p  =
+ =========================================
+
+
+ Starting time iteration loop ...
+
+
+ ******************************************************************
+Time step number       5   t =    0.1000 s out of   14000
+ ******************************************************************
+ We have done    2.85734702E-02 % of the total
+ Max norm of vector field in solid (elastic) =    0.00000000    
+ Max norm of backward vector field in solid (elastic) =    4.92528721E-04
+ Elapsed time in seconds =    3.0000209808349609E-003
+ Elapsed time in hh:mm:ss =      0 h 00 m 00 s
+ Mean elapsed time per time step in seconds =    6.0000419616699217E-004
+ Time steps remaining =        13995
+ Estimated remaining time in seconds =    8.3970587253570557     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 08 s
+ Estimated total run time in seconds =    8.4000587463378906     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 08 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+ Creating color image of size          800  x          320  for time step            5
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    0.0000000000000000     
+ Color image created
+ Creating color image of size          800  x          320  for time step            5
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.9476912060593176E-004
+ Color image created
+
+
+ Total number of time steps done:          100
+ Writing the seismograms by main proc alone took    1.47328526E-02  seconds
+
+
+ Total number of time steps done:          200
+ Writing the seismograms by main proc alone took    1.32375406E-02  seconds
+
+ Creating color image of size          800  x          320  for time step          200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    8.9629205325561996E-021
+ Color image created
+ Creating color image of size          800  x          320  for time step          200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.3320796518018345E-004
+ Color image created
+
+
+ Total number of time steps done:          300
+ Writing the seismograms by main proc alone took    1.33011416E-02  seconds
+
+
+ ******************************************************************
+Time step number     400   t =    9.9750 s out of   14000
+ ******************************************************************
+ We have done    2.85020351     % of the total
+ Max norm of vector field in solid (elastic) =    1.40058221E-18
+ Max norm of backward vector field in solid (elastic) =    5.00209222E-04
+ Elapsed time in seconds =   0.35999989509582520     
+ Elapsed time in hh:mm:ss =      0 h 00 m 00 s
+ Mean elapsed time per time step in seconds =    8.9999973773956298E-004
+ Time steps remaining =        13600
+ Estimated remaining time in seconds =    12.239996433258057     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 12 s
+ Estimated total run time in seconds =    12.599996328353882     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 12 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:          400
+ Writing the seismograms by main proc alone took    1.29944095E-02  seconds
+
+ Creating color image of size          800  x          320  for time step          400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.2334354069832374E-018
+ Color image created
+ Creating color image of size          800  x          320  for time step          400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.0172760066244815E-004
+ Color image created
+
+
+ Total number of time steps done:          500
+ Writing the seismograms by main proc alone took    1.27977440E-02  seconds
+
+
+ Total number of time steps done:          600
+ Writing the seismograms by main proc alone took    1.31799467E-02  seconds
+
+ Creating color image of size          800  x          320  for time step          600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.7661532638997687E-017
+ Color image created
+ Creating color image of size          800  x          320  for time step          600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.4471200417178242E-004
+ Color image created
+
+
+ Total number of time steps done:          700
+ Writing the seismograms by main proc alone took    1.35585349E-02  seconds
+
+
+ ******************************************************************
+Time step number     800   t =   19.9750 s out of   14000
+ ******************************************************************
+ We have done    5.70755053     % of the total
+ Max norm of vector field in solid (elastic) =    5.52352865E-17
+ Max norm of backward vector field in solid (elastic) =    5.38014749E-04
+ Elapsed time in seconds =   0.72799992561340332     
+ Elapsed time in hh:mm:ss =      0 h 00 m 00 s
+ Mean elapsed time per time step in seconds =    9.0999990701675412E-004
+ Time steps remaining =        13200
+ Estimated remaining time in seconds =    12.011998772621155     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 12 s
+ Estimated total run time in seconds =    12.739998698234558     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 12 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:          800
+ Writing the seismograms by main proc alone took    1.33533115E-02  seconds
+
+ Creating color image of size          800  x          320  for time step          800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    5.0842434353520602E-017
+ Color image created
+ Creating color image of size          800  x          320  for time step          800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.3847107296518088E-004
+ Color image created
+
+
+ Total number of time steps done:          900
+ Writing the seismograms by main proc alone took    1.41245807E-02  seconds
+
+
+ Total number of time steps done:         1000
+ Writing the seismograms by main proc alone took    1.52998362E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         1000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.2052292005989190E-016
+ Color image created
+ Creating color image of size          800  x          320  for time step         1000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.9201635763685531E-004
+ Color image created
+
+
+ Total number of time steps done:         1100
+ Writing the seismograms by main proc alone took    1.56983417E-02  seconds
+
+
+ ******************************************************************
+Time step number    1200   t =   29.9750 s out of   14000
+ ******************************************************************
+ We have done    8.56489754     % of the total
+ Max norm of vector field in solid (elastic) =    3.31290812E-16
+ Max norm of backward vector field in solid (elastic) =    4.44405072E-04
+ Elapsed time in seconds =    1.1069998741149902     
+ Elapsed time in hh:mm:ss =      0 h 00 m 01 s
+ Mean elapsed time per time step in seconds =    9.2249989509582517E-004
+ Time steps remaining =        12800
+ Estimated remaining time in seconds =    11.807998657226562     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 11 s
+ Estimated total run time in seconds =    12.914998531341553     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 12 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         1200
+ Writing the seismograms by main proc alone took    1.55947832E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         1200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    3.1474113560829834E-016
+ Color image created
+ Creating color image of size          800  x          320  for time step         1200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.4533891206288473E-004
+ Color image created
+
+
+ Total number of time steps done:         1300
+ Writing the seismograms by main proc alone took    1.52640129E-02  seconds
+
+
+ Total number of time steps done:         1400
+ Writing the seismograms by main proc alone took    1.54232010E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         1400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    5.1606523694418211E-016
+ Color image created
+ Creating color image of size          800  x          320  for time step         1400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.5103082062850091E-004
+ Color image created
+
+
+ Total number of time steps done:         1500
+ Writing the seismograms by main proc alone took    1.55042568E-02  seconds
+
+
+ ******************************************************************
+Time step number    1600   t =   39.9750 s out of   14000
+ ******************************************************************
+ We have done    11.4222441     % of the total
+ Max norm of vector field in solid (elastic) =    8.13155335E-16
+ Max norm of backward vector field in solid (elastic) =    4.60602489E-04
+ Elapsed time in seconds =    1.4889998435974121     
+ Elapsed time in hh:mm:ss =      0 h 00 m 01 s
+ Mean elapsed time per time step in seconds =    9.3062490224838257E-004
+ Time steps remaining =        12400
+ Estimated remaining time in seconds =    11.539748787879944     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 11 s
+ Estimated total run time in seconds =    13.028748631477356     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         1600
+ Writing the seismograms by main proc alone took    1.53722763E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         1600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    7.7856299468360744E-016
+ Color image created
+ Creating color image of size          800  x          320  for time step         1600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.6112104506310911E-004
+ Color image created
+
+
+ Total number of time steps done:         1700
+ Writing the seismograms by main proc alone took    1.58214960E-02  seconds
+
+
+ Total number of time steps done:         1800
+ Writing the seismograms by main proc alone took    1.69702135E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         1800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.0975079257492993E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         1800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.7108542546283287E-004
+ Color image created
+
+
+ Total number of time steps done:         1900
+ Writing the seismograms by main proc alone took    1.56781543E-02  seconds
+
+
+ ******************************************************************
+Time step number    2000   t =   49.9750 s out of   14000
+ ******************************************************************
+ We have done    14.2795916     % of the total
+ Max norm of vector field in solid (elastic) =    1.21002934E-15
+ Max norm of backward vector field in solid (elastic) =    4.52843378E-04
+ Elapsed time in seconds =    1.8769998550415039     
+ Elapsed time in hh:mm:ss =      0 h 00 m 01 s
+ Mean elapsed time per time step in seconds =    9.3849992752075191E-004
+ Time steps remaining =        12000
+ Estimated remaining time in seconds =    11.261999130249023     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 11 s
+ Estimated total run time in seconds =    13.138998985290527     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         2000
+ Writing the seismograms by main proc alone took    1.53138423E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         2000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.1729809698516713E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         2000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.5342654838631183E-004
+ Color image created
+
+
+ Total number of time steps done:         2100
+ Writing the seismograms by main proc alone took    1.63214430E-02  seconds
+
+
+ Total number of time steps done:         2200
+ Writing the seismograms by main proc alone took    1.59181803E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         2200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.4176771035222990E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         2200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.0278193772392260E-004
+ Color image created
+
+
+ Total number of time steps done:         2300
+ Writing the seismograms by main proc alone took    1.57679059E-02  seconds
+
+
+ ******************************************************************
+Time step number    2400   t =   59.9750 s out of   14000
+ ******************************************************************
+ We have done    17.1369381     % of the total
+ Max norm of vector field in solid (elastic) =    2.09622168E-15
+ Max norm of backward vector field in solid (elastic) =    5.26136137E-04
+ Elapsed time in seconds =    2.2649998664855957     
+ Elapsed time in hh:mm:ss =      0 h 00 m 02 s
+ Mean elapsed time per time step in seconds =    9.4374994436899817E-004
+ Time steps remaining =        11600
+ Estimated remaining time in seconds =    10.947499354680378     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 10 s
+ Estimated total run time in seconds =    13.212499221165974     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         2400
+ Writing the seismograms by main proc alone took    1.39545342E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         2400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    2.0665678497770213E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         2400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.2546607206947087E-004
+ Color image created
+
+
+ Total number of time steps done:         2500
+ Writing the seismograms by main proc alone took    1.42898392E-02  seconds
+
+
+ Total number of time steps done:         2600
+ Writing the seismograms by main proc alone took    1.40381800E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         2600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.9537910194370416E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         2600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.5248049019566460E-004
+ Color image created
+
+
+ Total number of time steps done:         2700
+ Writing the seismograms by main proc alone took    1.42465783E-02  seconds
+
+
+ ******************************************************************
+Time step number    2800   t =   69.9750 s out of   14000
+ ******************************************************************
+ We have done    19.9942856     % of the total
+ Max norm of vector field in solid (elastic) =    2.19060593E-15
+ Max norm of backward vector field in solid (elastic) =    5.12316183E-04
+ Elapsed time in seconds =    2.6480000019073486     
+ Elapsed time in hh:mm:ss =      0 h 00 m 02 s
+ Mean elapsed time per time step in seconds =    9.4571428639548161E-004
+ Time steps remaining =        11200
+ Estimated remaining time in seconds =    10.592000007629395     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 10 s
+ Estimated total run time in seconds =    13.240000009536743     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         2800
+ Writing the seismograms by main proc alone took    1.40892947E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         2800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    2.0994268376246420E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         2800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.1124039043020189E-004
+ Color image created
+
+
+ Total number of time steps done:         2900
+ Writing the seismograms by main proc alone took    1.40324757E-02  seconds
+
+
+ Total number of time steps done:         3000
+ Writing the seismograms by main proc alone took    1.39112286E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         3000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.8492733925983922E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         3000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.5928748300309076E-004
+ Color image created
+
+
+ Total number of time steps done:         3100
+ Writing the seismograms by main proc alone took    1.32199321E-02  seconds
+
+
+ ******************************************************************
+Time step number    3200   t =   79.9750 s out of   14000
+ ******************************************************************
+ We have done    22.8516331     % of the total
+ Max norm of vector field in solid (elastic) =    2.73744955E-15
+ Max norm of backward vector field in solid (elastic) =    8.90750496E-04
+ Elapsed time in seconds =    3.0290000438690186     
+ Elapsed time in hh:mm:ss =      0 h 00 m 03 s
+ Mean elapsed time per time step in seconds =    9.4656251370906831E-004
+ Time steps remaining =        10800
+ Estimated remaining time in seconds =    10.222875148057938     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 10 s
+ Estimated total run time in seconds =    13.251875191926956     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         3200
+ Writing the seismograms by main proc alone took    1.34941200E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         3200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    2.5357355495463455E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         3200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    8.9100571078566779E-004
+ Color image created
+
+
+ Total number of time steps done:         3300
+ Writing the seismograms by main proc alone took    1.05203288E-02  seconds
+
+
+ Total number of time steps done:         3400
+ Writing the seismograms by main proc alone took    1.03648175E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         3400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    2.5493668198784472E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         3400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.1864369746895248E-003
+ Color image created
+
+
+ Total number of time steps done:         3500
+ Writing the seismograms by main proc alone took    1.02316812E-02  seconds
+
+
+ ******************************************************************
+Time step number    3600   t =   89.9750 s out of   14000
+ ******************************************************************
+ We have done    25.7089787     % of the total
+ Max norm of vector field in solid (elastic) =    3.09027583E-15
+ Max norm of backward vector field in solid (elastic) =    1.22038869E-03
+ Elapsed time in seconds =    3.3999998569488525     
+ Elapsed time in hh:mm:ss =      0 h 00 m 03 s
+ Mean elapsed time per time step in seconds =    9.4444440470801462E-004
+ Time steps remaining =        10400
+ Estimated remaining time in seconds =    9.8222218089633522     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 09 s
+ Estimated total run time in seconds =    13.222221665912205     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         3600
+ Writing the seismograms by main proc alone took    1.02700079E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         3600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    3.0923417904176373E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         3600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.2218247287966741E-003
+ Color image created
+
+
+ Total number of time steps done:         3700
+ Writing the seismograms by main proc alone took    1.04833450E-02  seconds
+
+
+ Total number of time steps done:         3800
+ Writing the seismograms by main proc alone took    1.03691267E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         3800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    3.2647791839869404E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         3800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.3212446444169350E-003
+ Color image created
+
+
+ Total number of time steps done:         3900
+ Writing the seismograms by main proc alone took    1.01278406E-02  seconds
+
+
+ ******************************************************************
+Time step number    4000   t =   99.9750 s out of   14000
+ ******************************************************************
+ We have done    28.5663261     % of the total
+ Max norm of vector field in solid (elastic) =    3.36453536E-15
+ Max norm of backward vector field in solid (elastic) =    1.46660139E-03
+ Elapsed time in seconds =    3.7660000324249268     
+ Elapsed time in hh:mm:ss =      0 h 00 m 03 s
+ Mean elapsed time per time step in seconds =    9.4150000810623168E-004
+ Time steps remaining =        10000
+ Estimated remaining time in seconds =    9.4150000810623169     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 09 s
+ Estimated total run time in seconds =    13.181000113487244     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         4000
+ Writing the seismograms by main proc alone took    1.04859369E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         4000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    3.1578671821959283E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         4000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.4675727008172392E-003
+ Color image created
+
+
+ Total number of time steps done:         4100
+ Writing the seismograms by main proc alone took    1.20488768E-02  seconds
+
+
+ Total number of time steps done:         4200
+ Writing the seismograms by main proc alone took    1.21714594E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         4200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    2.7319801512727074E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         4200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    2.9157983105249992E-003
+ Color image created
+
+
+ Total number of time steps done:         4300
+ Writing the seismograms by main proc alone took    1.30060967E-02  seconds
+
+
+ ******************************************************************
+Time step number    4400   t =  109.9750 s out of   14000
+ ******************************************************************
+ We have done    31.4236736     % of the total
+ Max norm of vector field in solid (elastic) =    3.57780364E-15
+ Max norm of backward vector field in solid (elastic) =    4.05602902E-03
+ Elapsed time in seconds =    4.1399998664855957     
+ Elapsed time in hh:mm:ss =      0 h 00 m 04 s
+ Mean elapsed time per time step in seconds =    9.4090906056490810E-004
+ Time steps remaining =         9600
+ Estimated remaining time in seconds =    9.0327269814231173     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 09 s
+ Estimated total run time in seconds =    13.172726847908713     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         4400
+ Writing the seismograms by main proc alone took    1.21518830E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         4400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    2.8762081845043048E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         4400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.0625698033484488E-003
+ Color image created
+
+
+ Total number of time steps done:         4500
+ Writing the seismograms by main proc alone took    1.22126183E-02  seconds
+
+
+ Total number of time steps done:         4600
+ Writing the seismograms by main proc alone took    1.25885280E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         4600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    2.5102156902096208E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         4600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.2522674152043767E-003
+ Color image created
+
+
+ Total number of time steps done:         4700
+ Writing the seismograms by main proc alone took    1.27664674E-02  seconds
+
+
+ ******************************************************************
+Time step number    4800   t =  119.9750 s out of   14000
+ ******************************************************************
+ We have done    34.2810211     % of the total
+ Max norm of vector field in solid (elastic) =    3.04016515E-15
+ Max norm of backward vector field in solid (elastic) =    5.64564951E-03
+ Elapsed time in seconds =    4.5149998664855957     
+ Elapsed time in hh:mm:ss =      0 h 00 m 04 s
+ Mean elapsed time per time step in seconds =    9.4062497218449907E-004
+ Time steps remaining =         9200
+ Estimated remaining time in seconds =    8.6537497440973912     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 08 s
+ Estimated total run time in seconds =    13.168749610582987     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         4800
+ Writing the seismograms by main proc alone took    1.26642492E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         4800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    2.8985469143343208E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         4800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.6416674435508778E-003
+ Color image created
+
+
+ Total number of time steps done:         4900
+ Writing the seismograms by main proc alone took    1.24917300E-02  seconds
+
+
+ Total number of time steps done:         5000
+ Writing the seismograms by main proc alone took    1.25873229E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         5000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    3.2840080703316484E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         5000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    6.3057967042676822E-003
+ Color image created
+
+
+ Total number of time steps done:         5100
+ Writing the seismograms by main proc alone took    1.27415573E-02  seconds
+
+
+ ******************************************************************
+Time step number    5200   t =  129.9750 s out of   14000
+ ******************************************************************
+ We have done    37.1383667     % of the total
+ Max norm of vector field in solid (elastic) =    3.62441756E-15
+ Max norm of backward vector field in solid (elastic) =    7.17065111E-03
+ Elapsed time in seconds =    4.8880000114440918     
+ Elapsed time in hh:mm:ss =      0 h 00 m 04 s
+ Mean elapsed time per time step in seconds =    9.4000000220078683E-004
+ Time steps remaining =         8800
+ Estimated remaining time in seconds =    8.2720000193669243     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 08 s
+ Estimated total run time in seconds =    13.160000030811016     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         5200
+ Writing the seismograms by main proc alone took    1.27607761E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         5200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    3.6255392605732592E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         5200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    7.1779517759423660E-003
+ Color image created
+
+
+ Total number of time steps done:         5300
+ Writing the seismograms by main proc alone took    1.30841369E-02  seconds
+
+
+ Total number of time steps done:         5400
+ Writing the seismograms by main proc alone took    1.26877706E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         5400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    3.4700452224668522E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         5400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    7.1011206951497119E-003
+ Color image created
+
+
+ Total number of time steps done:         5500
+ Writing the seismograms by main proc alone took    1.84874404E-02  seconds
+
+
+ ******************************************************************
+Time step number    5600   t =  139.9750 s out of   14000
+ ******************************************************************
+ We have done    39.9957123     % of the total
+ Max norm of vector field in solid (elastic) =    6.37367348E-15
+ Max norm of backward vector field in solid (elastic) =    7.23072374E-03
+ Elapsed time in seconds =    5.2690000534057617     
+ Elapsed time in hh:mm:ss =      0 h 00 m 05 s
+ Mean elapsed time per time step in seconds =    9.4089286667960030E-004
+ Time steps remaining =         8400
+ Estimated remaining time in seconds =    7.9035000801086426     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 07 s
+ Estimated total run time in seconds =    13.172500133514404     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         5600
+ Writing the seismograms by main proc alone took    1.88171212E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         5600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    5.5838413204149978E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         5600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    7.2280614597479117E-003
+ Color image created
+
+
+ Total number of time steps done:         5700
+ Writing the seismograms by main proc alone took    1.23054916E-02  seconds
+
+
+ Total number of time steps done:         5800
+ Writing the seismograms by main proc alone took    1.26447286E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         5800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    5.9117518671653478E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         5800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    7.1536800539114421E-003
+ Color image created
+
+
+ Total number of time steps done:         5900
+ Writing the seismograms by main proc alone took    1.28094284E-02  seconds
+
+
+ ******************************************************************
+Time step number    6000   t =  149.9750 s out of   14000
+ ******************************************************************
+ We have done    42.8530617     % of the total
+ Max norm of vector field in solid (elastic) =    4.91961945E-15
+ Max norm of backward vector field in solid (elastic) =    7.09331455E-03
+ Elapsed time in seconds =    5.6489999294281006     
+ Elapsed time in hh:mm:ss =      0 h 00 m 05 s
+ Mean elapsed time per time step in seconds =    9.4149998823801675E-004
+ Time steps remaining =         8000
+ Estimated remaining time in seconds =    7.5319999059041338     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 07 s
+ Estimated total run time in seconds =    13.180999835332234     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         6000
+ Writing the seismograms by main proc alone took    1.28603661E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         6000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    4.9258395846354465E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         6000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    7.0953585442244636E-003
+ Color image created
+
+
+ Total number of time steps done:         6100
+ Writing the seismograms by main proc alone took    1.24752903E-02  seconds
+
+
+ Total number of time steps done:         6200
+ Writing the seismograms by main proc alone took    1.28593817E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         6200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    6.2611537896167868E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         6200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    7.5065488138868512E-003
+ Color image created
+
+
+ Total number of time steps done:         6300
+ Writing the seismograms by main proc alone took    1.26665886E-02  seconds
+
+
+ ******************************************************************
+Time step number    6400   t =  159.9750 s out of   14000
+ ******************************************************************
+ We have done    45.7104073     % of the total
+ Max norm of vector field in solid (elastic) =    6.65859800E-15
+ Max norm of backward vector field in solid (elastic) =    8.95573851E-03
+ Elapsed time in seconds =    6.0249998569488525     
+ Elapsed time in hh:mm:ss =      0 h 00 m 06 s
+ Mean elapsed time per time step in seconds =    9.4140622764825820E-004
+ Time steps remaining =         7600
+ Estimated remaining time in seconds =    7.1546873301267624     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 07 s
+ Estimated total run time in seconds =    13.179687187075615     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         6400
+ Writing the seismograms by main proc alone took    1.25977220E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         6400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    6.6585051631184416E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         6400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    8.9716342728100272E-003
+ Color image created
+
+
+ Total number of time steps done:         6500
+ Writing the seismograms by main proc alone took    1.27585707E-02  seconds
+
+
+ Total number of time steps done:         6600
+ Writing the seismograms by main proc alone took    1.28292991E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         6600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    6.6753023031281615E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         6600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    8.2123235528062128E-003
+ Color image created
+
+
+ Total number of time steps done:         6700
+ Writing the seismograms by main proc alone took    1.29271457E-02  seconds
+
+
+ ******************************************************************
+Time step number    6800   t =  169.9750 s out of   14000
+ ******************************************************************
+ We have done    48.5677567     % of the total
+ Max norm of vector field in solid (elastic) =    6.46280125E-15
+ Max norm of backward vector field in solid (elastic) =    7.84160290E-03
+ Elapsed time in seconds =    6.4010000228881836     
+ Elapsed time in hh:mm:ss =      0 h 00 m 06 s
+ Mean elapsed time per time step in seconds =    9.4132353277767407E-004
+ Time steps remaining =         7200
+ Estimated remaining time in seconds =    6.7775294359992531     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 06 s
+ Estimated total run time in seconds =    13.178529458887436     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         6800
+ Writing the seismograms by main proc alone took    1.34378029E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         6800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    6.4523835160102834E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         6800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    7.8725913021111434E-003
+ Color image created
+
+
+ Total number of time steps done:         6900
+ Writing the seismograms by main proc alone took    1.27475457E-02  seconds
+
+
+ Total number of time steps done:         7000
+ Writing the seismograms by main proc alone took    1.29858628E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         7000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    7.1933597750348304E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         7000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    8.1077003699119889E-003
+ Color image created
+
+
+ Total number of time steps done:         7100
+ Writing the seismograms by main proc alone took    1.31132994E-02  seconds
+
+
+ ******************************************************************
+Time step number    7200   t =  179.9750 s out of   14000
+ ******************************************************************
+ We have done    51.4251022     % of the total
+ Max norm of vector field in solid (elastic) =    7.80723142E-15
+ Max norm of backward vector field in solid (elastic) =    8.43611266E-03
+ Elapsed time in seconds =    6.7779998779296875     
+ Elapsed time in hh:mm:ss =      0 h 00 m 06 s
+ Mean elapsed time per time step in seconds =    9.4138887193467879E-004
+ Time steps remaining =         6800
+ Estimated remaining time in seconds =    6.4014443291558161     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 06 s
+ Estimated total run time in seconds =    13.179444207085503     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         7200
+ Writing the seismograms by main proc alone took    1.29533811E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         7200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    7.8088925812390016E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         7200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    8.4540923737979733E-003
+ Color image created
+
+
+ Total number of time steps done:         7300
+ Writing the seismograms by main proc alone took    1.30676236E-02  seconds
+
+
+ Total number of time steps done:         7400
+ Writing the seismograms by main proc alone took    1.29067572E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         7400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    7.9719025076188671E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         7400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    8.2889084463071382E-003
+ Color image created
+
+
+ Total number of time steps done:         7500
+ Writing the seismograms by main proc alone took    1.28961857E-02  seconds
+
+
+ ******************************************************************
+Time step number    7600   t =  189.9750 s out of   14000
+ ******************************************************************
+ We have done    54.2824478     % of the total
+ Max norm of vector field in solid (elastic) =    8.33409100E-15
+ Max norm of backward vector field in solid (elastic) =    7.81506300E-03
+ Elapsed time in seconds =    7.1579999923706055     
+ Elapsed time in hh:mm:ss =      0 h 00 m 07 s
+ Mean elapsed time per time step in seconds =    9.4184210425929025E-004
+ Time steps remaining =         6400
+ Estimated remaining time in seconds =    6.0277894672594572     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 06 s
+ Estimated total run time in seconds =    13.185789459630062     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         7600
+ Writing the seismograms by main proc alone took    1.31018823E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         7600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    8.3346234598828399E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         7600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    7.8158485891421329E-003
+ Color image created
+
+
+ Total number of time steps done:         7700
+ Writing the seismograms by main proc alone took    1.27173373E-02  seconds
+
+
+ Total number of time steps done:         7800
+ Writing the seismograms by main proc alone took    1.26889832E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         7800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.0492160795765214E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step         7800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    9.0876608557095128E-003
+ Color image created
+
+
+ Total number of time steps done:         7900
+ Writing the seismograms by main proc alone took    1.23307770E-02  seconds
+
+
+ ******************************************************************
+Time step number    8000   t =  199.9750 s out of   14000
+ ******************************************************************
+ We have done    57.1397972     % of the total
+ Max norm of vector field in solid (elastic) =    1.06053319E-14
+ Max norm of backward vector field in solid (elastic) =    9.78829805E-03
+ Elapsed time in seconds =    7.5329999923706055     
+ Elapsed time in hh:mm:ss =      0 h 00 m 07 s
+ Mean elapsed time per time step in seconds =    9.4162499904632566E-004
+ Time steps remaining =         6000
+ Estimated remaining time in seconds =    5.6497499942779541     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 05 s
+ Estimated total run time in seconds =    13.182749986648560     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         8000
+ Writing the seismograms by main proc alone took    1.27731115E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         8000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.0618391664618142E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step         8000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    9.7905570483154646E-003
+ Color image created
+
+
+ Total number of time steps done:         8100
+ Writing the seismograms by main proc alone took    1.29475081E-02  seconds
+
+
+ Total number of time steps done:         8200
+ Writing the seismograms by main proc alone took    1.29369106E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         8200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.3546986822383789E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step         8200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.0187216167525904E-002
+ Color image created
+
+
+ Total number of time steps done:         8300
+ Writing the seismograms by main proc alone took    1.34814484E-02  seconds
+
+
+ ******************************************************************
+Time step number    8400   t =  209.9750 s out of   14000
+ ******************************************************************
+ We have done    59.9971428     % of the total
+ Max norm of vector field in solid (elastic) =    1.37177011E-14
+ Max norm of backward vector field in solid (elastic) =    1.01407254E-02
+ Elapsed time in seconds =    7.9099998474121094     
+ Elapsed time in hh:mm:ss =      0 h 00 m 07 s
+ Mean elapsed time per time step in seconds =    9.4166664850144164E-004
+ Time steps remaining =         5600
+ Estimated remaining time in seconds =    5.2733332316080732     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 05 s
+ Estimated total run time in seconds =    13.183333079020183     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         8400
+ Writing the seismograms by main proc alone took    1.31157413E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         8400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.3715730364605994E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step         8400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.0115464197328262E-002
+ Color image created
+
+
+ Total number of time steps done:         8500
+ Writing the seismograms by main proc alone took    1.24300597E-02  seconds
+
+
+ Total number of time steps done:         8600
+ Writing the seismograms by main proc alone took    1.19824251E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         8600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.2724723476371396E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step         8600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.0715398178783227E-002
+ Color image created
+
+
+ Total number of time steps done:         8700
+ Writing the seismograms by main proc alone took    1.32562546E-02  seconds
+
+
+ ******************************************************************
+Time step number    8800   t =  219.9750 s out of   14000
+ ******************************************************************
+ We have done    62.8544884     % of the total
+ Max norm of vector field in solid (elastic) =    1.02445518E-14
+ Max norm of backward vector field in solid (elastic) =    1.08020818E-02
+ Elapsed time in seconds =    8.2819998264312744     
+ Elapsed time in hh:mm:ss =      0 h 00 m 08 s
+ Mean elapsed time per time step in seconds =    9.4113634391264486E-004
+ Time steps remaining =         5200
+ Estimated remaining time in seconds =    4.8939089883457534     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 04 s
+ Estimated total run time in seconds =    13.175908814777028     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         8800
+ Writing the seismograms by main proc alone took    1.33196572E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         8800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.0186733118798312E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step         8800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.0814033216897364E-002
+ Color image created
+
+
+ Total number of time steps done:         8900
+ Writing the seismograms by main proc alone took    1.30806351E-02  seconds
+
+
+ Total number of time steps done:         9000
+ Writing the seismograms by main proc alone took    1.31865200E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         9000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    9.4669170711282503E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         9000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.0587124571591500E-002
+ Color image created
+
+
+ Total number of time steps done:         9100
+ Writing the seismograms by main proc alone took    1.35596888E-02  seconds
+
+
+ ******************************************************************
+Time step number    9200   t =  229.9750 s out of   14000
+ ******************************************************************
+ We have done    65.7118378     % of the total
+ Max norm of vector field in solid (elastic) =    9.91332548E-15
+ Max norm of backward vector field in solid (elastic) =    1.23853423E-02
+ Elapsed time in seconds =    8.6569998264312744     
+ Elapsed time in hh:mm:ss =      0 h 00 m 08 s
+ Mean elapsed time per time step in seconds =    9.4097824200339939E-004
+ Time steps remaining =         4800
+ Estimated remaining time in seconds =    4.5166955616163174     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 04 s
+ Estimated total run time in seconds =    13.173695388047591     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         9200
+ Writing the seismograms by main proc alone took    1.34118851E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         9200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    9.8456049967486005E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         9200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.2366587251998956E-002
+ Color image created
+
+
+ Total number of time steps done:         9300
+ Writing the seismograms by main proc alone took    1.29339993E-02  seconds
+
+
+ Total number of time steps done:         9400
+ Writing the seismograms by main proc alone took    1.32152196E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         9400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.0995931587130522E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step         9400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.2362346836073400E-002
+ Color image created
+
+
+ Total number of time steps done:         9500
+ Writing the seismograms by main proc alone took    1.32412408E-02  seconds
+
+
+ ******************************************************************
+Time step number    9600   t =  239.9750 s out of   14000
+ ******************************************************************
+ We have done    68.5691833     % of the total
+ Max norm of vector field in solid (elastic) =    9.62058243E-15
+ Max norm of backward vector field in solid (elastic) =    1.35269640E-02
+ Elapsed time in seconds =    9.0299999713897705     
+ Elapsed time in hh:mm:ss =      0 h 00 m 09 s
+ Mean elapsed time per time step in seconds =    9.4062499701976778E-004
+ Time steps remaining =         4400
+ Estimated remaining time in seconds =    4.1387499868869781     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 04 s
+ Estimated total run time in seconds =    13.168749958276749     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:         9600
+ Writing the seismograms by main proc alone took    1.32732373E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         9600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    9.6027442403484867E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step         9600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.3537452626895999E-002
+ Color image created
+
+
+ Total number of time steps done:         9700
+ Writing the seismograms by main proc alone took    1.31824976E-02  seconds
+
+
+ Total number of time steps done:         9800
+ Writing the seismograms by main proc alone took    1.30736465E-02  seconds
+
+ Creating color image of size          800  x          320  for time step         9800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.0078990095609947E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step         9800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.4731731528864391E-002
+ Color image created
+
+
+ Total number of time steps done:         9900
+ Writing the seismograms by main proc alone took    1.32606979E-02  seconds
+
+
+ ******************************************************************
+Time step number   10000   t =  249.9750 s out of   14000
+ ******************************************************************
+ We have done    71.4265289     % of the total
+ Max norm of vector field in solid (elastic) =    3.77457871E-14
+ Max norm of backward vector field in solid (elastic) =    1.59867760E-02
+ Elapsed time in seconds =    9.3989999294281006     
+ Elapsed time in hh:mm:ss =      0 h 00 m 09 s
+ Mean elapsed time per time step in seconds =    9.3989999294281001E-004
+ Time steps remaining =         4000
+ Estimated remaining time in seconds =    3.7595999717712401     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 03 s
+ Estimated total run time in seconds =    13.158599901199342     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:        10000
+ Writing the seismograms by main proc alone took    1.36611406E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        10000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    3.5159656658366093E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        10000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    1.5959298460483603E-002
+ Color image created
+
+
+ Total number of time steps done:        10100
+ Writing the seismograms by main proc alone took    1.30135529E-02  seconds
+
+
+ Total number of time steps done:        10200
+ Writing the seismograms by main proc alone took    1.30637353E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        10200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    3.0129530701915814E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        10200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    3.7122908376302187E-002
+ Color image created
+
+
+ Total number of time steps done:        10300
+ Writing the seismograms by main proc alone took    1.35935973E-02  seconds
+
+
+ ******************************************************************
+Time step number   10400   t =  259.9750 s out of   14000
+ ******************************************************************
+ We have done    74.2838745     % of the total
+ Max norm of vector field in solid (elastic) =    2.43356208E-14
+ Max norm of backward vector field in solid (elastic) =   0.108889140    
+ Elapsed time in seconds =    9.7660000324249268     
+ Elapsed time in hh:mm:ss =      0 h 00 m 09 s
+ Mean elapsed time per time step in seconds =    9.3903846465624296E-004
+ Time steps remaining =         3600
+ Estimated remaining time in seconds =    3.3805384727624745     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 03 s
+ Estimated total run time in seconds =    13.146538505187401     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:        10400
+ Writing the seismograms by main proc alone took    1.35502378E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        10400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    2.2533373430389085E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        10400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =   0.10133204028357758     
+ Color image created
+
+
+ Total number of time steps done:        10500
+ Writing the seismograms by main proc alone took    1.35068931E-02  seconds
+
+
+ Total number of time steps done:        10600
+ Writing the seismograms by main proc alone took    1.37750367E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        10600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    4.0237033744083038E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        10600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    2.1967446531651266E-003
+ Color image created
+
+
+ Total number of time steps done:        10700
+ Writing the seismograms by main proc alone took    1.34053379E-02  seconds
+
+
+ ******************************************************************
+Time step number   10800   t =  269.9750 s out of   14000
+ ******************************************************************
+ We have done    77.1412277     % of the total
+ Max norm of vector field in solid (elastic) =    1.48857841E-14
+ Max norm of backward vector field in solid (elastic) =    6.66854021E-08
+ Elapsed time in seconds =    10.135999917984009     
+ Elapsed time in hh:mm:ss =      0 h 00 m 10 s
+ Mean elapsed time per time step in seconds =    9.3851851092444528E-004
+ Time steps remaining =         3200
+ Estimated remaining time in seconds =    3.0032592349582248     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 03 s
+ Estimated total run time in seconds =    13.139259152942234     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:        10800
+ Writing the seismograms by main proc alone took    1.37143750E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        10800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.3713021108816232E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        10800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.2870675005546206E-008
+ Color image created
+
+
+ Total number of time steps done:        10900
+ Writing the seismograms by main proc alone took    1.32428771E-02  seconds
+
+
+ Total number of time steps done:        11000
+ Writing the seismograms by main proc alone took    1.34575944E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        11000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.0403152311613161E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        11000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.2144407638917314E-008
+ Color image created
+
+
+ Total number of time steps done:        11100
+ Writing the seismograms by main proc alone took    1.35089252E-02  seconds
+
+
+ ******************************************************************
+Time step number   11200   t =  279.9750 s out of   14000
+ ******************************************************************
+ We have done    79.9985733     % of the total
+ Max norm of vector field in solid (elastic) =    9.49030876E-15
+ Max norm of backward vector field in solid (elastic) =    6.17139264E-08
+ Elapsed time in seconds =    10.519000053405762     
+ Elapsed time in hh:mm:ss =      0 h 00 m 10 s
+ Mean elapsed time per time step in seconds =    9.3919643333980013E-004
+ Time steps remaining =         2800
+ Estimated remaining time in seconds =    2.6297500133514404     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 02 s
+ Estimated total run time in seconds =    13.148750066757202     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:        11200
+ Writing the seismograms by main proc alone took    1.38251875E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        11200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    9.5088853067759245E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step        11200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.0449430636714486E-008
+ Color image created
+
+
+ Total number of time steps done:        11300
+ Writing the seismograms by main proc alone took    1.37062185E-02  seconds
+
+
+ Total number of time steps done:        11400
+ Writing the seismograms by main proc alone took    1.38384886E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        11400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.0716774803701830E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        11400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    3.7969789936793456E-008
+ Color image created
+
+
+ Total number of time steps done:        11500
+ Writing the seismograms by main proc alone took    1.24634048E-02  seconds
+
+
+ ******************************************************************
+Time step number   11600   t =  289.9750 s out of   14000
+ ******************************************************************
+ We have done    82.8559189     % of the total
+ Max norm of vector field in solid (elastic) =    9.50404255E-15
+ Max norm of backward vector field in solid (elastic) =    5.56406263E-08
+ Elapsed time in seconds =    10.901000022888184     
+ Elapsed time in hh:mm:ss =      0 h 00 m 10 s
+ Mean elapsed time per time step in seconds =    9.3974138128346413E-004
+ Time steps remaining =         2400
+ Estimated remaining time in seconds =    2.2553793150803139     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 02 s
+ Estimated total run time in seconds =    13.156379337968497     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:        11600
+ Writing the seismograms by main proc alone took    1.29990447E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        11600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    9.3153157525818116E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step        11600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.3244049528938491E-008
+ Color image created
+
+
+ Total number of time steps done:        11700
+ Writing the seismograms by main proc alone took    1.26309292E-02  seconds
+
+
+ Total number of time steps done:        11800
+ Writing the seismograms by main proc alone took    1.28148012E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        11800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.0258968702997894E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        11800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.8836132451468657E-008
+ Color image created
+
+
+ Total number of time steps done:        11900
+ Writing the seismograms by main proc alone took    1.33250616E-02  seconds
+
+
+ ******************************************************************
+Time step number   12000   t =  299.9750 s out of   14000
+ ******************************************************************
+ We have done    85.7132645     % of the total
+ Max norm of vector field in solid (elastic) =    1.14026118E-14
+ Max norm of backward vector field in solid (elastic) =    6.72963907E-08
+ Elapsed time in seconds =    11.280999898910522     
+ Elapsed time in hh:mm:ss =      0 h 00 m 11 s
+ Mean elapsed time per time step in seconds =    9.4008332490921019E-004
+ Time steps remaining =         2000
+ Estimated remaining time in seconds =    1.8801666498184204     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 01 s
+ Estimated total run time in seconds =    13.161166548728943     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:        12000
+ Writing the seismograms by main proc alone took    1.34840598E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        12000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.1231640845767642E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        12000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.2834492691088659E-008
+ Color image created
+
+
+ Total number of time steps done:        12100
+ Writing the seismograms by main proc alone took    1.26289260E-02  seconds
+
+
+ Total number of time steps done:        12200
+ Writing the seismograms by main proc alone took    1.25543494E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        12200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.1021056437999776E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        12200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    3.4797423236522135E-008
+ Color image created
+
+
+ Total number of time steps done:        12300
+ Writing the seismograms by main proc alone took    1.28480280E-02  seconds
+
+
+ ******************************************************************
+Time step number   12400   t =  309.9750 s out of   14000
+ ******************************************************************
+ We have done    88.5706100     % of the total
+ Max norm of vector field in solid (elastic) =    1.16364395E-14
+ Max norm of backward vector field in solid (elastic) =    7.79343949E-08
+ Elapsed time in seconds =    11.658999919891357     
+ Elapsed time in hh:mm:ss =      0 h 00 m 11 s
+ Mean elapsed time per time step in seconds =    9.4024192902349656E-004
+ Time steps remaining =         1600
+ Estimated remaining time in seconds =    1.5043870864375946     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 01 s
+ Estimated total run time in seconds =    13.163387006328952     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:        12400
+ Writing the seismograms by main proc alone took    1.26593634E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        12400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    1.1563149543775182E-014
+ Color image created
+ Creating color image of size          800  x          320  for time step        12400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.0038176369380743E-008
+ Color image created
+
+
+ Total number of time steps done:        12500
+ Writing the seismograms by main proc alone took    1.24377487E-02  seconds
+
+
+ Total number of time steps done:        12600
+ Writing the seismograms by main proc alone took    1.26696583E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        12600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    9.9243561633164897E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step        12600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.0229998708950519E-008
+ Color image created
+
+
+ Total number of time steps done:        12700
+ Writing the seismograms by main proc alone took    1.21939797E-02  seconds
+
+
+ ******************************************************************
+Time step number   12800   t =  319.9750 s out of   14000
+ ******************************************************************
+ We have done    91.4279556     % of the total
+ Max norm of vector field in solid (elastic) =    9.46068124E-15
+ Max norm of backward vector field in solid (elastic) =    8.66537704E-08
+ Elapsed time in seconds =    12.037999868392944     
+ Elapsed time in hh:mm:ss =      0 h 00 m 12 s
+ Mean elapsed time per time step in seconds =    9.4046873971819877E-004
+ Time steps remaining =         1200
+ Estimated remaining time in seconds =    1.1285624876618385     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 01 s
+ Estimated total run time in seconds =    13.166562356054783     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:        12800
+ Writing the seismograms by main proc alone took    1.92982443E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        12800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    9.4600665359754121E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step        12800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.3883615824187871E-008
+ Color image created
+
+
+ Total number of time steps done:        12900
+ Writing the seismograms by main proc alone took    1.26157198E-02  seconds
+
+
+ Total number of time steps done:        13000
+ Writing the seismograms by main proc alone took    1.24969305E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        13000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    7.7479128364555000E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step        13000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.2658933837695160E-008
+ Color image created
+
+
+ Total number of time steps done:        13100
+ Writing the seismograms by main proc alone took    1.23780109E-02  seconds
+
+
+ ******************************************************************
+Time step number   13200   t =  329.9750 s out of   14000
+ ******************************************************************
+ We have done    94.2853088     % of the total
+ Max norm of vector field in solid (elastic) =    7.54049397E-15
+ Max norm of backward vector field in solid (elastic) =    8.98111594E-08
+ Elapsed time in seconds =    12.425999879837036     
+ Elapsed time in hh:mm:ss =      0 h 00 m 12 s
+ Mean elapsed time per time step in seconds =    9.4136362726038151E-004
+ Time steps remaining =          800
+ Estimated remaining time in seconds =   0.75309090180830518     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 00 s
+ Estimated total run time in seconds =    13.179090781645341     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:        13200
+ Writing the seismograms by main proc alone took    1.27220741E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        13200
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    7.5394640338854686E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step        13200
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.5375674757270739E-008
+ Color image created
+
+
+ Total number of time steps done:        13300
+ Writing the seismograms by main proc alone took    1.23738991E-02  seconds
+
+
+ Total number of time steps done:        13400
+ Writing the seismograms by main proc alone took    1.22660184E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        13400
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    6.8454999801108875E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step        13400
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.0671930467551761E-008
+ Color image created
+
+
+ Total number of time steps done:        13500
+ Writing the seismograms by main proc alone took    1.23892957E-02  seconds
+
+
+ ******************************************************************
+Time step number   13600   t =  339.9750 s out of   14000
+ ******************************************************************
+ We have done    97.1426544     % of the total
+ Max norm of vector field in solid (elastic) =    5.94353278E-15
+ Max norm of backward vector field in solid (elastic) =    1.00051942E-07
+ Elapsed time in seconds =    12.804999828338623     
+ Elapsed time in hh:mm:ss =      0 h 00 m 12 s
+ Mean elapsed time per time step in seconds =    9.4154410502489871E-004
+ Time steps remaining =          400
+ Estimated remaining time in seconds =   0.37661764200995951     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 00 s
+ Estimated total run time in seconds =    13.181617470348582     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+ The run will finish approximately on: Tue May 23, 2023 12:00
+
+
+ Total number of time steps done:        13600
+ Writing the seismograms by main proc alone took    1.22569259E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        13600
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    5.9393988926991590E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step        13600
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    4.7222965529678399E-008
+ Color image created
+
+
+ Total number of time steps done:        13700
+ Writing the seismograms by main proc alone took    1.22730713E-02  seconds
+
+
+ Total number of time steps done:        13800
+ Writing the seismograms by main proc alone took    1.27535528E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        13800
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    5.3482374792240906E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step        13800
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.2778434467225601E-008
+ Color image created
+
+
+ Total number of time steps done:        13900
+ Writing the seismograms by main proc alone took    1.26977433E-02  seconds
+
+
+ ******************************************************************
+Time step number   14000   t =  349.9750 s out of   14000
+ ******************************************************************
+ We have done    100.000000     % of the total
+ Max norm of vector field in solid (elastic) =    5.31359438E-15
+ Max norm of backward vector field in solid (elastic) =    1.01792594E-07
+ Elapsed time in seconds =    13.182999849319458     
+ Elapsed time in hh:mm:ss =      0 h 00 m 13 s
+ Mean elapsed time per time step in seconds =    9.4164284637996126E-004
+ Time steps remaining =            0
+ Estimated remaining time in seconds =    0.0000000000000000     
+ Estimated remaining time in hh:mm:ss =      0 h 00 m 00 s
+ Estimated total run time in seconds =    13.182999849319458     
+ Estimated total run time in hh:mm:ss =      0 h 00 m 13 s
+
+
+ Total number of time steps done:        14000
+ Writing the seismograms by main proc alone took    1.23942317E-02  seconds
+
+ Creating color image of size          800  x          320  for time step        14000
+ drawing scalar image of the adjoint wavefield displacement...
+ Color image maximum amplitude =    5.3053424028087960E-015
+ Color image created
+ Creating color image of size          800  x          320  for time step        14000
+ drawing scalar image of the reconstructed forward wavefield displacement...
+ Color image maximum amplitude =    5.4867168967810996E-008
+ Color image created
+
+
+ Total duration of the time loop in seconds =    13.2260427      s
+ Total number of time steps =        14000
+ Average duration of a time step of the time loop =    9.44717322E-04  s
+ Total number of spectral elements in the mesh =          400
+     of which          400  are regular elements
+     and            0  are PML elements.
+ Average duration of the calculation per spectral element =    2.36179335E-06  s
+
+
+ Total duration of the timeloop in seconds, measured using 
+ date and time of the system :    13.2259998      s
+
+ Writing Kernels file
+
+ Elastic kernels:
+   maximum value of rho  kernel      =    5.99835326E-14
+   maximum value of kappa kernel     =    8.45920691E-14
+   maximum value of mu kernel        =    1.42292496E-13
+
+   maximum value of rho prime kernel =    1.52831144E-13
+   maximum value of alpha kernel     =    2.74189634E-13
+   maximum value of beta kernel      =    3.58898268E-13
+
+   ./OUTPUT_FILES/proc000000_rho_kernel.bin
+   ./OUTPUT_FILES/proc000000_kappa_kernel.bin
+   ./OUTPUT_FILES/proc000000_mu_kernel.bin
+   ./OUTPUT_FILES/proc000000_rhop_kernel.bin
+   ./OUTPUT_FILES/proc000000_alpha_kernel.bin
+   ./OUTPUT_FILES/proc000000_beta_kernel.bin
+   ./OUTPUT_FILES/proc000000_bulk_c_kernel.bin
+   ./OUTPUT_FILES/proc000000_bulk_beta_kernel.bin
+
+   ./OUTPUT_FILES/proc000000_weights_kernel.bin
+
+
+ Saving model files to directory: ./DATA/
+   SAVE_MODEL type: binary
+
+   written to file(s): ./DATA/proc000000_rho.bin
+   written to file(s): ./DATA/proc000000_vp.bin
+   written to file(s): ./DATA/proc000000_vs.bin
+   written to file(s): ./DATA/proc000000_x.bin
+   written to file(s): ./DATA/proc000000_z.bin
+   written to file(s): ./DATA/proc000000_jacobian.bin
+
+   done
+
+
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+ Program SPECFEM2D: 
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+ Tape-Liu-Tromp (GJI 2007)
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------
+ D a t e : 23 - 05 - 2023                                 T i m e  : 12:00:10
+ -------------------------------------------------------------------------------
+ -------------------------------------------------------------------------------

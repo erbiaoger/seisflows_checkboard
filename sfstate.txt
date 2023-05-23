@@ -1,0 +1,11 @@
+# SeisFlows State File
+# Tue May 23 10:34:52 2023
+# Acceptable states: 'completed', 'failed', 'pending'
+# =======================================
+evaluate_initial_misfit: pending
+run_adjoint_simulations: pending
+postprocess_event_kernels: pending
+evaluate_gradient_from_kernels: pending
+initialize_line_search: pending
+perform_line_search: pending
+iteration: 31

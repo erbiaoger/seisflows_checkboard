@@ -1,0 +1,17 @@
+ Running XSMOOTH_SEM on           4 processors
+ command line arguments:
+   smoothing sigma_h , sigma_v                :    40000.0000       40000.0000    
+   smoothing scalelengths horizontal, vertical:    113137.086       113137.086    
+   input dir : /home/erbiaoger/MyProjects/Seisflows/work/day_3/seisflows_checkboard/scratch/eval_grad/mk_nosmooth/
+   output dir: /home/erbiaoger/MyProjects/Seisflows/work/day_3/seisflows_checkboard/scratch/eval_grad/misfit_kernel/
+
+
+ Scaling values: min/max =    2.51325466E+09   9.80730573E+09
+ written: /home/erbiaoger/MyProjects/Seisflows/work/day_3/seisflows_checkboard/scratch/eval_grad/misfit_kernel//proc000000_vs_kernel_smooth.bin
+ Computation time with CPU:   1.53190517    
+
+  Min / Max data value before smoothing =    9.95263713E-19   4.09886319E-10 for vs_kernel
+  Min / Max data value after smoothing  =    1.35262228E-19   1.53856013E-14 for vs_kernel
+ Computation time with CPU:   1.53192914    
+ Computation time with CPU:   1.53191507    
+ Computation time with CPU:   1.53191745    

@@ -1,0 +1,1731 @@
+[2023-05-23 11:47:26] - pyatoa - INFO: 
+================================================================================
+                                    SUMMARY                                     
+================================================================================
+SOURCE NAME: 002
+WINDOWS: 0
+RAW MISFIT: 0.0001
+
+================================================================================
+                                    RAW LOGS                                    
+================================================================================
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0001.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0001.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0001.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0001.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0001.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0001.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0001.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0001
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0001.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:23] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0002.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0002.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0002.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0002.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0002.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0002.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0002.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0002
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0002.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:23] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0003.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0003.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0003.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0003.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0003.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0003.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0003.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0003
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0003.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:23] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0004.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0004.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0004.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0004.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0004.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0004.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0004.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0004
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0004.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:23] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0005.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0005.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0005.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0005.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0005.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0005.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0005.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0005
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0005.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:23] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0006.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0006.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0006.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0006.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0006.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0006.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0006.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0006
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0006.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:23] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0007.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0007.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0007.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0007.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0007.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0007.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0007.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0007
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0007.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:23] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0008.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0008.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0008.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0008.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0008.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0008.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0008.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0008
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0008.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:23] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0009.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0009.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0009.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0009.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0009.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0009.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0009.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0009
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0009.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:23] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0010.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0010.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0010.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0010.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0010.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0010.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0010.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0010
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0010.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:23] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:23] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:23] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0011.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:23] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:23] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:23] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering data for AA.S0011.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering observed waveforms: AA.S0011.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:23] - pyatoa - INFO: matching observed waveforms found: AA.S0011.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering synthetic waveforms: AA.S0011.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:23] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0011.*.*
+[2023-05-23 11:47:23] - pyatoa - INFO: gathering StationXML for: AA.S0011.*.*
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0011
+[2023-05-23 11:47:23] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:23] - pyatoa - WARNING: Could not find matching StationXML for AA.S0011.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:23] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:23] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:23] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:23] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:23] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:23] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:23] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:23] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:23] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:23] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:23] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:23] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0012.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0012.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0012.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0012.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0012.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0012.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0012.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0012
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0012.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0013.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0013.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0013.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0013.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0013.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0013.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0013.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0013
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0013.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0014.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0014.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0014.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0014.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0014.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0014.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0014.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0014
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0014.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0015.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0015.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0015.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0015.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0015.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0015.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0015.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0015
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0015.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0016.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0016.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0016.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0016.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0016.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0016.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0016.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0016
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0016.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0017.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0017.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0017.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0017.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0017.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0017.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0017.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0017
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0017.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0018.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0018.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0018.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0018.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0018.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0018.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0018.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0018
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0018.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0019.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0019.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0019.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0019.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0019.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0019.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0019.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0019
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0019.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0020.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0020.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0020.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0020.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0020.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0020.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0020.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0020
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0020.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0021.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0021.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0021.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0021.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0021.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0021.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0021.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0021
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0021.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0022.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0022.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0022.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0022.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0022.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0022.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0022.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0022
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0022.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0023.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0023.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0023.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0023.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0023.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0023.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0023.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0023
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0023.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0024.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0024.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0024.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0024.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0024.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0024.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0024.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0024
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0024.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:24] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:24] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:24] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0025.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:24] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:24] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:24] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering data for AA.S0025.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering observed waveforms: AA.S0025.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:24] - pyatoa - INFO: matching observed waveforms found: AA.S0025.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering synthetic waveforms: AA.S0025.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:24] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0025.*.*
+[2023-05-23 11:47:24] - pyatoa - INFO: gathering StationXML for: AA.S0025.*.*
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0025
+[2023-05-23 11:47:24] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:24] - pyatoa - WARNING: Could not find matching StationXML for AA.S0025.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:24] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:24] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:24] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:24] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:24] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:24] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:24] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:24] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:24] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:24] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:24] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:24] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0026.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0026.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0026.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0026.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0026.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0026.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0026.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0026
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0026.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0027.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0027.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0027.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0027.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0027.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0027.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0027.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0027
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0027.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0028.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0028.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0028.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0028.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0028.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0028.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0028.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0028
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0028.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0029.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0029.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0029.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0029.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0029.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0029.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0029.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0029
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0029.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0030.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0030.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0030.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0030.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0030.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0030.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0030.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0030
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0030.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0031.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0031.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0031.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0031.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0031.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0031.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0031.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0031
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0031.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0032.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0032.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0032.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0032.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0032.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0032.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0032.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0032
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0032.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0033.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0033.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0033.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0033.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0033.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0033.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0033.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0033
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0033.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0034.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0034.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0034.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0034.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0034.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0034.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0034.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0034
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0034.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0035.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0035.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0035.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0035.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0035.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0035.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0035.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0035
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0035.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0036.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0036.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0036.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0036.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0036.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0036.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0036.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0036
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0036.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0037.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0037.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0037.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0037.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0037.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0037.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0037.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0037
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0037.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0038.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0038.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0038.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0038.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0038.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0038.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0038.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0038
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0038.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:25] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:25] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:25] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0039.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:25] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:25] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:25] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering data for AA.S0039.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering observed waveforms: AA.S0039.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:25] - pyatoa - INFO: matching observed waveforms found: AA.S0039.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering synthetic waveforms: AA.S0039.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:25] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0039.*.*
+[2023-05-23 11:47:25] - pyatoa - INFO: gathering StationXML for: AA.S0039.*.*
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0039
+[2023-05-23 11:47:25] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:25] - pyatoa - WARNING: Could not find matching StationXML for AA.S0039.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:25] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:25] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:25] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:25] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:25] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:25] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:25] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:25] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:25] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:25] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:25] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:25] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:26] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:26] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:26] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:26] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
+[2023-05-23 11:47:26] - pyatoa - INFO: 
+////////////////////////////////////////////////////////////////////////////////
+                                  AA.S0040.*.*                                  
+////////////////////////////////////////////////////////////////////////////////
+[2023-05-23 11:47:26] - pyatoa - INFO: fixed windows flag set constant: False
+[2023-05-23 11:47:26] - pyatoa - INFO: gathering event QuakeML
+[2023-05-23 11:47:26] - pyatoa - DEBUG: searching ASDFDataSet for event info
+[2023-05-23 11:47:26] - pyatoa - DEBUG: event origin time is set to: 1970-01-01T00:00:00.000000Z
+[2023-05-23 11:47:26] - pyatoa - INFO: matching event found: '2'
+[2023-05-23 11:47:26] - pyatoa - INFO: gathering data for AA.S0040.*.*
+[2023-05-23 11:47:26] - pyatoa - INFO: gathering observed waveforms: AA.S0040.*.*
+[2023-05-23 11:47:26] - pyatoa - DEBUG: searching ASDFDataSet for observations
+[2023-05-23 11:47:26] - pyatoa - INFO: matching observed waveforms found: AA.S0040.*.*
+[2023-05-23 11:47:26] - pyatoa - INFO: gathering synthetic waveforms: AA.S0040.*.*
+[2023-05-23 11:47:26] - pyatoa - DEBUG: searching ASDFDataSet for synthetics
+[2023-05-23 11:47:26] - pyatoa - DEBUG: matching synthetic waveforms found: AA.S0040.*.*
+[2023-05-23 11:47:26] - pyatoa - INFO: gathering StationXML for: AA.S0040.*.*
+[2023-05-23 11:47:26] - pyatoa - DEBUG: searching ASDFDataSet for StationXML
+[2023-05-23 11:47:26] - pyatoa - DEBUG: no matching inventory in dataset: AA_S0040
+[2023-05-23 11:47:26] - pyatoa - DEBUG: searching local filesystem for StationXML
+[2023-05-23 11:47:26] - pyatoa - WARNING: Could not find matching StationXML for AA.S0040.*.*, setting 'inv' attribute to None
+[2023-05-23 11:47:26] - pyatoa - INFO: standardizing time series
+[2023-05-23 11:47:26] - pyatoa - DEBUG: start and endtimes already match to 0.001
+[2023-05-23 11:47:26] - pyatoa - INFO: syn time offset == -90.0s
+[2023-05-23 11:47:26] - pyatoa - INFO: preprocess `st_obs` as 'syn'
+[2023-05-23 11:47:26] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:26] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:26] - pyatoa - INFO: preprocess `st_syn` as 'syn'
+[2023-05-23 11:47:26] - pyatoa - INFO: skip remove response (no `inv`)
+[2023-05-23 11:47:26] - pyatoa - INFO: bandpass filter: 10.0 - 200.0s w/ 2 corners
+[2023-05-23 11:47:26] - pyatoa - INFO: pyflex preset is set to 'None', will not window
+[2023-05-23 11:47:26] - pyatoa - DEBUG: measure misfit of type: waveform
+[2023-05-23 11:47:26] - pyatoa - DEBUG: no windows given, adjoint sources will be calculated on full trace
+[2023-05-23 11:47:26] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:26] - pyatoa - INFO: X: 0.000 misfit
+[2023-05-23 11:47:26] - pyadjoint - INFO: performing misfit caluclation with adjoint source type: `waveform`
+[2023-05-23 11:47:26] - pyatoa - INFO: Z: 0.000 misfit
+[2023-05-23 11:47:26] - pyatoa - DEBUG: config parameter `save_to_ds` is set False, will not save adjoint sources
+[2023-05-23 11:47:26] - pyatoa - INFO: total misfit == 0.000
+[2023-05-23 11:47:26] - pyatoa - DEBUG: Event already present, not added
+[2023-05-23 11:47:26] - pyatoa - DEBUG: observed waveform already present, not added
+[2023-05-23 11:47:26] - pyatoa - DEBUG: synthetic_i25s00 waveform already present, not added
+[2023-05-23 11:47:26] - pyatoa - DEBUG: saving adjoint sources to ASDFDataSet
